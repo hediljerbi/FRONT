@@ -1,0 +1,25 @@
+<div class="example-container">
+    <div class="form-container">
+      <form [formGroup]="updateCommandeForm">
+        <mat-form-field appearance="fill">
+        <mat-label for="commande_client" >Client</mat-label>
+        <input matInput formControlName="commande_client" required >
+      </mat-form-field>
+        <br>
+  
+        <mat-form-field appearance="fill">
+          <mat-label for="commande_date">Date</mat-label>
+          <input matInput formControlName="commande_date" required>
+        </mat-form-field>
+          <br>
+  
+          <mat-form-field appearance="fill">
+            <mat-label  for="commande_information">information</mat-label>
+            <input matInput formControlName="commande_information" required>
+          </mat-form-field>
+            <br>
+            <button mat-raised-button color="primary" type="submit" (click)="updateCommande()">UPDATE</button>
+          </form>           
+        </div>
+     </div>
+  

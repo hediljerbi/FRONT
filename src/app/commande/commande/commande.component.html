@@ -1,0 +1,48 @@
+
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef> COMMANDE N. </th>
+      <td mat-cell *matCellDef="let post"> {{post.id}} </td>
+    </ng-container>
+  
+ 
+    <ng-container matColumnDef="commandeclient">
+      <th mat-header-cell *matHeaderCellDef>CLIENT </th>
+      <td mat-cell *matCellDef="let post"> {{post.commande_client}} </td>
+    </ng-container>
+  
+t
+
+    <ng-container matColumnDef="commandedate">
+      <th mat-header-cell *matHeaderCellDef> DATE </th>
+      <td mat-cell *matCellDef="let post"> {{post.commande_date}} </td>
+    </ng-container>
+  
+
+    <ng-container matColumnDef="commandeinformation">
+      <th mat-header-cell *matHeaderCellDef> INFORMATION </th>
+      <td mat-cell *matCellDef="let post"> {{post.commande_information}}</td>
+    </ng-container> 
+
+    <ng-container matColumnDef="action">
+      <th mat-header-cell *matHeaderCellDef> ACTION </th>
+      <td mat-cell *matCellDef="let commande"> 
+        <button mat-button color="primary" (click)="delete(commande)" >
+         <mat-icon>delete</mat-icon> 
+        </button>
+        <button mat-button color="primary"  [routerLink]="['/commandes/update-commande/', commande.id]" >
+          <mat-icon>edit</mat-icon> 
+         </button>
+
+      </td>
+    </ng-container> 
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let post; columns: displayedColumns;"></tr>
+  </table>
+  <br>
+  <div class="centre">
+ 
+   
+     <button mat-raised-button color="primary" routerLink="/commandes/ajouter-commande"  >ADD </button>
+</div>

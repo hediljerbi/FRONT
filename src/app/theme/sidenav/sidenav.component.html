@@ -1,0 +1,35 @@
+<mat-sidenav-container class="app-sidenav-container">
+    <mat-sidenav #sidenav class="app-sidenav mat-elevation-z8"
+    opened="true"
+    mode="side"
+    >
+        <mat-toolbar color="primary">
+            Patients
+        </mat-toolbar>
+        <mat-list>
+            <mat-list-item>V Menu Item 1</mat-list-item>
+            <mat-list-item>V Menu Item 2</mat-list-item>
+            <mat-list-item>V Menu Item 3</mat-list-item>
+            <mat-list-item>V Menu Item 4</mat-list-item>
+        </mat-list>
+    </mat-sidenav>
+
+    <div class="app-sidenav-content">
+        <app-toolbar (toggleSidenav)="sidenav.toggle()">
+            
+        </app-toolbar>
+        <mat-toolbar color="primary">
+        </mat-toolbar>
+        <!--<mat-card style="height: 100%;">
+            <mat-card-title> Main Content</mat-card-title>
+            <mat-card-content>-->
+                
+                <router-outlet></router-outlet>
+            
+            <!--</mat-card-content>
+        </mat-card>
+    -->
+        
+    </div>
+
+</mat-sidenav-container>
